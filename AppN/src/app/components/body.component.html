@@ -3,6 +3,18 @@
   <div class="container-fluid">
     <h1>*ngif</h1>
     <hr>
+    <button type="button" class="btn btn-outline-primary btn-block"(click)="mostrar = !mostrar">Mostrar / Ocultar</button>
+    <br>
+    <div *ngIf="mostrar" class="card card-inverse card-danger text-center">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <p>{{frase.mensaje}}</p>
+      <footer><cite title="Source Title">{{frase.autor}}</cite></footer>
+    </blockquote>
+  </div>
+</div>
+
+
   </div>
 
 </div>
@@ -10,6 +22,18 @@
 <div class="container-fluid">
   <h1>*ngfor</h1>
   <hr>
+
+  <button type="button" class="btn btn-outline-primary btn-block">Mostrar / Ocultar
+  </button>
+
+  <ul class="list-group">
+      <li *ngFor="let heroe of personajes; let i=index" class="list-group-item">
+      {{i+1}}.  {{heroe}}
+      </li>
+
+  </ul>
+
+
 </div>
 
 </div>
